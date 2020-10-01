@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EstudiosBiblicos.Vistas.WPerfil"
+             xmlns:local="clr-namespace:EstudiosBiblicos"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0"
+              BackgroundColor="#F2F2F2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="51*"></RowDefinition>
+                <RowDefinition Height="15*"></RowDefinition>
+                <RowDefinition Height="14*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Grid ColumnSpacing="0" RowSpacing="0"
+                Grid.Row="0">
+                <Label Text="Nombre Completo" TextColor="#9A9A9A"
+                        VerticalOptions="End" HorizontalOptions="Center"
+                        FontSize="20"
+                        Margin="0,0,0,5"
+                       x:Name="tbNombreCompleto">
+                                    
+                </Label>
+            </Grid>
+            <Frame Padding="0"  HorizontalOptions="FillAndExpand"
+                   Grid.Row="1" Margin="27,7,27,4" CornerRadius="11">
+                <Grid ColumnSpacing="0" RowSpacing="0"
+                    >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="22*"></RowDefinition>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="18*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label Text="Correo" TextColor="#3F8AD9"
+                            VerticalOptions="End" Grid.Row="0" 
+                            TranslationY="-22" FontSize="18"
+                            Margin="0,0,0,0"
+                           HorizontalOptions="Center">
+                                    
+                    </Label>
+                    <Label Text="esteesuncorreo@gmail.com" TextColor="#99BCE2"
+                            VerticalOptions="Start" Grid.Row="1" 
+                            TranslationY="-22" FontSize="16"
+                            Margin="0,0,0,0"
+                            HorizontalOptions="Center"
+                           x:Name="tbCorreo">
+                                    
+                    </Label>
+                    <Label Text="Teléfono" TextColor="#3F8AD9"
+                            VerticalOptions="End" Grid.Row="2" 
+                            TranslationY="-22" FontSize="18"
+                            Margin="0,0,0,0"
+                           HorizontalOptions="Center"
+                           >
+                                    
+                    </Label>
+                    <Label Text="809.000.0000" TextColor="#99BCE2"
+                            VerticalOptions="Start" Grid.Row="3" 
+                            TranslationY="-22" FontSize="16"
+                            Margin="0,0,0,0"
+                            HorizontalOptions="Center"
+                           x:Name="tbtelefono">
+                                    
+                    </Label>
+                    <Label Text="Fecha de Nacimiento" TextColor="#3F8AD9"
+                            VerticalOptions="End" Grid.Row="4" 
+                            TranslationY="-22" FontSize="18"
+                            Margin="0,0,0,0"
+                           HorizontalOptions="Center">
+                                    
+                    </Label>
+                    <Label Text="14/08/2020" TextColor="#99BCE2"
+                            VerticalOptions="Start" Grid.Row="5" 
+                            TranslationY="-22" FontSize="16"
+                            Margin="0,0,0,0"
+                            HorizontalOptions="Center"
+                           x:Name="tbfechanacimiento">
+                                    
+                    </Label>
+                    <Label Text="Redes Sociales vinculadas" TextColor="#3F8AD9"
+                            VerticalOptions="End" Grid.Row="6" 
+                            TranslationY="-22" FontSize="18"
+                            Margin="0,0,0,0" IsVisible="False"
+                           HorizontalOptions="Center">
+                                    
+                    </Label>
+                </Grid>
+            </Frame>
+            <Grid VerticalOptions="End" HorizontalOptions="Center"
+                              WidthRequest="85" HeightRequest="35"                          
+                          Margin="0,0,0,-13" Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                                <ColumnDefinition Width="7*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                            Tapped="OnTapGuardar"
+                                            NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Button Grid.Column="0" Grid.ColumnSpan="3" 
+                                BackgroundColor="#3f8ad9" TextColor="Transparent"
+                                CornerRadius="20"
+                                    x:Name="btneditar"
+                                    Clicked="btneditar_Clicked"/>
+                            <Label Text="&#xf303;" x:Name="lblGoBack"
+                               FontFamily="{StaticResource FontAwesomeSolid}" FontSize="18"
+                               VerticalOptions="Center" HorizontalOptions="End"
+                               Margin="0,0,-8,0" Grid.Column="0"
+                                   TextColor="White"/>                    
+                            <Label Grid.Column="1" VerticalOptions="Center" Text="Editar"
+                                   FontSize="16"
+                                   HorizontalOptions="FillAndExpand"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="White"
+                                   Margin="0,0,-8,0"/>
+                        </Grid> 
+            <Grid VerticalOptions="End" HorizontalOptions="Center"
+                      WidthRequest="145" HeightRequest="35"
+                  Grid.Row="2"
+                  Margin="0,0,0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="7*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                    Tapped="OnTapCerrarsesion"
+                                    NumberOfTapsRequired="1" />
+                    </Grid.GestureRecognizers>
+                    <Button Grid.Column="0" Grid.ColumnSpan="3" 
+                        BackgroundColor="#FABA00" TextColor="Transparent"
+                        CornerRadius="20"
+                            x:Name="btncerrarcesion"
+                            Clicked="btncerrarcesion_Clicked"/>
+                    <Label Text="&#xf2f5;" 
+                       FontFamily="{StaticResource FontAwesomeSolid}" FontSize="18"
+                       VerticalOptions="Center" HorizontalOptions="Start"
+                       Margin="13,0,0,0" Grid.Column="0"
+                           TextColor="White"/>                    
+                    <Label Grid.Column="1" VerticalOptions="Center"
+                           Text="Cerrar Sesión"
+                           FontSize="16"
+                           HorizontalOptions="FillAndExpand"
+                           HorizontalTextAlignment="Center"
+                           TextColor="White"
+                           Margin="-5,0,-7,0"/>
+                </Grid>
+            <Grid VerticalOptions="End" HorizontalOptions="Center"
+                      WidthRequest="193" HeightRequest="48"
+                  Grid.Row="3" Opacity="1"
+                  Margin="0,0,0,4">
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                    Tapped="OnTapGuardar"
+                                    NumberOfTapsRequired="1" />
+                    </Grid.GestureRecognizers>
+                    <Button Grid.Column="0" Grid.ColumnSpan="3" 
+                        BackgroundColor="White" TextColor="Transparent"
+                        CornerRadius="30"/>
+                    <Grid Grid.Column="0" WidthRequest="30" HeightRequest="30"
+                          VerticalOptions="Center" HorizontalOptions="Center"
+                          Margin="0,3,-11,0">
+                        <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Tapped="OnTapMenuBuscar"
+                                        NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>
+                    <ffimageloadingsvg:SvgCachedImage 
+                                                      
+                                                      Source="resource://EstudiosBiblicos.Iconos.Search.svg"/>
+                    </Grid>                    
+                    <Grid Grid.Column="1" WidthRequest="90" HeightRequest="90"
+                          VerticalOptions="Center" HorizontalOptions="Center"
+                          Margin="-20,-5,-20,0">
+                        <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Tapped="OnTapMenuMisCursos"
+                                        NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>
+                    <ffimageloadingsvg:SvgCachedImage VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                        Source="resource://EstudiosBiblicos.Iconos.Biblia.svg"/>
+                    </Grid>
+                    <Grid Grid.Column="2" WidthRequest="30" HeightRequest="30"
+                          VerticalOptions="Center" HorizontalOptions="Center"
+                          Margin="-10,3,0,0">
+                    <ffimageloadingsvg:SvgCachedImage VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                        Source="resource://EstudiosBiblicos.Iconos.account.svg"/>
+                    </Grid>
+                </Grid>  
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

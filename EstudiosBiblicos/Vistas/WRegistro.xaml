@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EstudiosBiblicos.Vistas.WRegistro"
+             xmlns:local="clr-namespace:EstudiosBiblicos"
+              xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0"
+              BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*"></RowDefinition>
+                <RowDefinition Height="57*"></RowDefinition>
+                <RowDefinition Height="18*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Source="registro" 
+                   Grid.Row="0" Grid.RowSpan="3" VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   Aspect="AspectFill"/>
+            
+            <Grid ColumnSpacing="0" RowSpacing="0"
+                Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="16*"></RowDefinition>
+                    <RowDefinition Height="16*"></RowDefinition>
+                    <RowDefinition Height="16*"></RowDefinition>
+                    <RowDefinition Height="16*"></RowDefinition>
+                    <RowDefinition Height="16*"></RowDefinition>
+                    <RowDefinition Height="16*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <local:RoundedEntry Grid.Row="0" 
+                                    Margin="61,5,40,0"
+                            TextColor="#99BCE2"
+                            Placeholder="Mi Nombre"
+                       FontSize="15"
+                                    x:Name="tbNombre"
+                       />  
+                <Label Text="Nombre" TextColor="#99BCE2"
+                        VerticalOptions="Center" Grid.Row="0" 
+                        TranslationY="-22" FontSize="11"
+                        Margin="65,15,40,0"
+                       >
+                                    
+                </Label>
+
+                <local:RoundedEntry Grid.Row="1" 
+                                    Margin="61,10,40,0"
+                            TextColor="#99BCE2"
+                            Placeholder="Apellidos"
+                                    
+                       FontSize="15"
+                                    x:Name="tbApellido"
+                       />  
+                <Label Text="Apellido" TextColor="#99BCE2"
+                        VerticalOptions="Center" Grid.Row="1" 
+                        TranslationY="-22" FontSize="11"
+                        Margin="65,18,40,0">
+                                    
+                </Label>
+
+                <local:RoundedEntry Grid.Row="2" 
+                                    Margin="61,10,40,0"
+                            TextColor="#99BCE2"
+                            Placeholder="micorreo"
+                                   
+                       FontSize="15"
+                                    x:Name="tbCorreo"
+                       />  
+                <Label Text="Correo" TextColor="#99BCE2"
+                        VerticalOptions="Center" Grid.Row="2" 
+                        TranslationY="-22" FontSize="11"
+                        Margin="65,20,40,0">
+                                    
+                </Label>
+                <local:RoundedEntry Grid.Row="3"                                       
+                                Margin="61,15,40,0"
+                            TextColor="#99BCE2"
+                            Placeholder="***************"
+                                    IsPassword="True"
+                       FontSize="18"
+                       x:Name="tbcontrasena"/>  
+                <Label Text="Contraseña" TextColor="#99BCE2"
+                        VerticalOptions="Center" Grid.Row="3"                    
+                        TranslationY="-22" FontSize="11"
+                        Margin="65,25,40,0">
+                                    
+                </Label>
+
+                <local:RoundedEntry Grid.Row="4" 
+                                    Margin="61,15,40,-5"
+                            TextColor="#99BCE2"
+                            Placeholder="809.000.0000"
+                                    
+                       FontSize="15"
+                       x:Name="tbtelefono"/>  
+                <Label Text="Teléfono" TextColor="#99BCE2"
+                        VerticalOptions="Center" Grid.Row="4" 
+                        TranslationY="-22" FontSize="11"
+                        Margin="65,28,40,0">
+                                    
+                </Label>
+
+                <Label Grid.Row="5" x:Name="tbfechanacimiento"
+                                    Margin="65,27,35,0"
+                            TextColor="#99BCE2"
+                       FontSize="15" Text="01/01/2020"
+                       >
+                    <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                    Tapped="OnTapFecha"
+                                    NumberOfTapsRequired="1" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <syncfusion:SfDatePicker  x:Name="DPFecha"                                  
+                            PickerMode="Dialog"
+                                         Margin="0,80,0,0"
+                                        Format="dd_MMM_yyyy"
+                                         HeaderText="Fecha de nacimiento"
+                                         ShowFooter="True"
+                                         DayHeaderText="Día"
+                                 MonthHeaderText="Mes"
+                                 YearHeaderText="Año"
+                                         DateSelected="DPFecha_DateSelected"
+                                          HeaderBackgroundColor="#3f8ad9"
+                                          OKButtonTextColor="#3f8ad9"
+                                          CancelButtonTextColor="#3f8ad9"
+                                          SelectedItemTextColor="#3f8ad9"
+                       /> 
+                <Label Text="Fecha de nacimiento" TextColor="#99BCE2"
+                        VerticalOptions="Center" Grid.Row="5" 
+                        TranslationY="-22" FontSize="11"
+                        Margin="65,33,40,0">
+                                    
+                </Label>
+            </Grid>
+            <Grid VerticalOptions="Center" HorizontalOptions="Center"
+                      WidthRequest="120" HeightRequest="35"
+                  Grid.Row="2" 
+                  Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="7*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                    Tapped="OnTapGuardar"
+                                    NumberOfTapsRequired="1" />
+                    </Grid.GestureRecognizers>
+                    <Button Grid.Column="0" Grid.ColumnSpan="3" 
+                        BackgroundColor="#3f8ad9" TextColor="Transparent"
+                        CornerRadius="20"
+                            Clicked="Button_Clicked"/>
+                    <Label Text="&#xf00c;" x:Name="lblGoBack"
+                       FontFamily="{StaticResource FontAwesomeSolid}" FontSize="18"
+                       VerticalOptions="Center" HorizontalOptions="End"
+                       Margin="0,0,0,0" Grid.Column="0"
+                           TextColor="White"/>                    
+                    <Label Grid.Column="1" VerticalOptions="Center"
+                           Text="¡Finalizar!"
+                           FontSize="17"
+                           HorizontalOptions="FillAndExpand"
+                           HorizontalTextAlignment="Center"
+                           TextColor="White"
+                           Margin="0,0,-7,0"/>
+                </Grid>                       
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

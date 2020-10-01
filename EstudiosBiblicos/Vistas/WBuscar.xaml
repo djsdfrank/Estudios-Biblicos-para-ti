@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EstudiosBiblicos.Vistas.WBuscar"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:local="clr-namespace:EstudiosBiblicos">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0"
+              BackgroundColor="#F2F2F2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*"></RowDefinition>
+                <RowDefinition Height="77*"></RowDefinition>
+                <RowDefinition Height="14*"></RowDefinition>
+            </Grid.RowDefinitions>
+                      
+            <Frame Padding="0"  HorizontalOptions="FillAndExpand"
+                   Grid.Row="0" Margin="18,7,17,4" CornerRadius="11"
+                   >
+                <Grid ColumnSpacing="0" RowSpacing="0"
+                    >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="85*"></ColumnDefinition>
+                        <ColumnDefinition Width="15*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <local:RoundedEntry Grid.Column="0" 
+                                Margin="10,0,0,0"
+                        TextColor="#99BCE2"
+                        Placeholder="Explora..."
+                   FontSize="13"
+                   />  
+                    <Grid Grid.Column="1" WidthRequest="20" HeightRequest="20"
+                          VerticalOptions="Center" HorizontalOptions="Center"
+                          Margin="0,0,0,0">
+                    <ffimageloadingsvg:SvgCachedImage 
+                                                      
+                                                      Source="resource://EstudiosBiblicos.Iconos.SearchS.svg"/>
+                    </Grid>
+                    
+                </Grid>
+            </Frame>
+            <Grid VerticalOptions="End" HorizontalOptions="Center"                                                     
+                          Margin="0,0,0,0" Grid.Row="1">
+                <ListView x:Name="LvCursos"  ItemsSource="{Binding Cursos}" HasUnevenRows="true"
+                        ItemSelected="LvCursos_ItemSelected" SeparatorColor="Transparent"
+                        Margin="10,24,10,0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell  Tapped="ViewCell_Tapped">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="90*"></RowDefinition>
+                                        <RowDefinition Height="10*"></RowDefinition>
+                                    </Grid.RowDefinitions> 
+                                <Frame Padding="0" HorizontalOptions="FillAndExpand"
+                                    Margin="30,0,30,0" CornerRadius="13"
+                                       HeightRequest="292"
+                                       Grid.Row="0">
+                                            <Grid>                                                
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="42*"></RowDefinition>
+                                                    <RowDefinition Height="10*"></RowDefinition>
+                                                    <RowDefinition Height="29*"></RowDefinition>
+                                                    <RowDefinition Height="19*"></RowDefinition>
+                                                </Grid.RowDefinitions>                                                
+                                                <Image Source="{Binding Imagen}" VerticalOptions="FillAndExpand"
+                                                        HorizontalOptions="FillAndExpand" Aspect="AspectFill"
+                                                        Grid.Row="0"/>
+                                                <Label Text="{Binding Nombre}" TextColor="#AAAAAA"
+                                                         FontSize="24"
+                                                        VerticalOptions="Start" HorizontalOptions="Center"                                                          
+                                                      Grid.Row="1"                     
+                                                      Margin="10,0,10,0">
+                                                </Label>
+                                                <Label Text="{Binding Descripcion}" TextColor="#AAAAAA"
+                                                         FontSize="10"
+                                                        VerticalOptions="Start" HorizontalOptions="FillAndExpand"                                                        
+                                                      Grid.Row="2"                     
+                                                      Margin="20,-3,20,0">
+                                                </Label>
+                                                <Grid Grid.Row="3" VerticalOptions="Start">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Text="{Binding CntLecciones}" TextColor="#98BCE2"
+                                                             FontSize="14" 
+                                                            VerticalOptions="Center" HorizontalOptions="End"                                                          
+                                                          Grid.Column="0"                     
+                                                          Margin="0,0,0,0">
+                                                    </Label>
+                                                    <Label Text="&#xf037;"
+                                                       FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                                       VerticalOptions="Center" HorizontalOptions="Center"
+                                                       Margin="0,0,50,0" Grid.Column="0"
+                                                           TextColor="#98BCE2"/>
+
+                                                    <Label Text="{Binding CntDuracion}" TextColor="#98BCE2"
+                                                             FontSize="14" 
+                                                            VerticalOptions="Center" HorizontalOptions="Start"                                                          
+                                                          Grid.Column="1"                     
+                                                          Margin="30,0,0,0">
+                                                    </Label>
+                                                    <Label Text="&#xf017;"
+                                                       FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                                       VerticalOptions="Center" HorizontalOptions="Start"
+                                                       Margin="10,0,50,0" Grid.Column="1"
+                                                           TextColor="#98BCE2"/> 
+                                                </Grid>                                                                                                                                                                                                   
+                                            </Grid>
+                                </Frame>
+                                    <Button Grid.Row="1" Padding="0"
+                                        BackgroundColor="#faba00" TextColor="White"
+                                        CornerRadius="20" Text="Iniciar"
+                                        VerticalOptions="Start" HorizontalOptions="Center"
+                                        WidthRequest="85" HeightRequest="35"                          
+                                        Margin="0,-26,0,0"
+                                        x:Name="btnIniciar"
+                                        Clicked="btnIniciar_Clicked"/> 
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                            
+            </Grid> 
+            <Grid VerticalOptions="End" HorizontalOptions="Center"
+                      WidthRequest="193" HeightRequest="48"
+                  Grid.Row="2"
+                  Margin="0,0,0,4">
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>                    
+                    <Button Grid.Column="0" Grid.ColumnSpan="3" 
+                        BackgroundColor="White" TextColor="Transparent"
+                        CornerRadius="30"/>
+                    <Grid Grid.Column="0" WidthRequest="30" HeightRequest="30"
+                          VerticalOptions="Center" HorizontalOptions="Center"
+                          Margin="0,3,-11,0">
+                    <ffimageloadingsvg:SvgCachedImage 
+                                                      
+                                                      Source="resource://EstudiosBiblicos.Iconos.SearchS.svg"/>
+                    </Grid>
+                    <Grid Grid.Column="1" WidthRequest="90" HeightRequest="90"
+                          VerticalOptions="Center" HorizontalOptions="Center"
+                          Margin="-20,-5,-20,0">
+                        <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Tapped="OnTapMenuMisCursos"
+                                        NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>
+                    <ffimageloadingsvg:SvgCachedImage VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                        Source="resource://EstudiosBiblicos.Iconos.Biblia.svg"/>
+                    </Grid>
+                    <Grid Grid.Column="2" WidthRequest="30" HeightRequest="30"
+                          VerticalOptions="Center" HorizontalOptions="Center"
+                          Margin="-10,3,0,0">
+                        <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Tapped="OnTapPerfil"
+                                        NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>
+                    <ffimageloadingsvg:SvgCachedImage VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                        Source="resource://EstudiosBiblicos.Iconos.accountS.svg"/>
+                    </Grid>
+                </Grid>  
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EstudiosBiblicos.Vistas.WResumenLeccionFinalizada">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0"
+              BackgroundColor="#F2F2F2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="18*"></RowDefinition>
+                <RowDefinition Height="68*"></RowDefinition>
+                <RowDefinition Height="14*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Source="fondo1" Grid.Column="0"
+                   Grid.Row="0" Grid.RowSpan="3" VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   Aspect="AspectFill"/>
+            <Grid HorizontalOptions="FillAndExpand"                                                     
+                          Margin="0,0,0,0" Grid.Row="0"
+                  Opacity="1"
+                  VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"></RowDefinition>
+                    <RowDefinition Height="4*"></RowDefinition>
+                    <RowDefinition Height="3*"></RowDefinition>
+                </Grid.RowDefinitions>                
+                
+                <Label Text="La Fe de Jesús" TextColor="White"
+                         FontSize="25"
+                        VerticalOptions="Center" HorizontalOptions="Center"                          
+                      Grid.Row="1"                     
+                      Margin="0,0,0,0"
+                       x:Name="LbNombre">
+                </Label>
+                <Label Text="Tu resultado" TextColor="White"
+                         FontSize="16"
+                        VerticalOptions="Center" HorizontalOptions="Center"                          
+                      Grid.Row="2"                     
+                      Margin="0,0,0,0">
+                </Label>
+            </Grid>
+            <Grid HorizontalOptions="Center"                                                     
+                          Margin="0,0,0,0" Grid.Row="1"
+                  VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions> 
+                    <Label Text="8%" TextColor="White"
+                             FontSize="30" FontAttributes="Bold"
+                            VerticalOptions="Center" HorizontalOptions="Center"                          
+                          Grid.Row="0"     Grid.Column="0" Grid.ColumnSpan="2"                
+                          Margin="0,0,0,0"
+                           x:Name="lbPct">
+                    </Label>
+                    <Label Text="Tiempo empleado" TextColor="White"
+                             FontSize="16"
+                            VerticalOptions="Center" HorizontalOptions="Start"                          
+                          Grid.Row="1"     FontAttributes="Bold"                 
+                          Margin="0,0,0,0">
+                    </Label>
+                    <Label Text="Punto" TextColor="White"
+                             FontSize="16"
+                            VerticalOptions="Center" HorizontalOptions="Start"                          
+                          Grid.Row="2"     FontAttributes="Bold"                 
+                          Margin="0,0,0,0">
+                    </Label>
+                    <Label Text="Preguntas" TextColor="White"
+                                 FontSize="16" FontAttributes="Bold"
+                                VerticalOptions="Center" HorizontalOptions="Start"                          
+                              Grid.Row="3"                     
+                              Margin="0,0,0,0">
+                        </Label>
+                    <Label Text="Correcto" TextColor="White"
+                                 FontSize="16" FontAttributes="Bold"
+                                VerticalOptions="Center" HorizontalOptions="Start"                          
+                              Grid.Row="4"                     
+                              Margin="0,0,0,0">
+                        </Label>
+                    <Label Text="Incorrecto" TextColor="White"
+                             FontSize="16" FontAttributes="Bold"
+                            VerticalOptions="Center" HorizontalOptions="Start"                          
+                          Grid.Row="5"                     
+                          Margin="0,0,0,0">
+                    </Label>
+                
+                    <Label Text="09:12:44:40" TextColor="White"
+                             FontSize="16" FontAttributes="Bold"
+                            VerticalOptions="Center" HorizontalOptions="End"                          
+                          Grid.Row="1"
+                           Grid.Column="1" x:Name="LBTiempo"
+                          Margin="0,0,0,0">
+                    </Label>
+                    <Label Text="0/7" TextColor="White"
+                             FontSize="16" FontAttributes="Bold"
+                            VerticalOptions="Center" HorizontalOptions="End"                          
+                          Grid.Row="2"
+                           Grid.Column="1" x:Name="LBPuntos"
+                          Margin="0,0,0,0">
+                    </Label>
+                    <Label Text="7" TextColor="White"
+                             FontSize="16" FontAttributes="Bold"
+                            VerticalOptions="Center" HorizontalOptions="End"                          
+                          Grid.Row="3"
+                           Grid.Column="1" x:Name="LBPreguntas"
+                          Margin="0,0,0,0">
+                    </Label>
+                    <Label Text="0" TextColor="White"
+                             FontSize="16" FontAttributes="Bold"
+                            VerticalOptions="Center" HorizontalOptions="End"                          
+                          Grid.Row="4"
+                           Grid.Column="1" x:Name="LBCorrecto"
+                          Margin="0,0,0,0">
+                    </Label>
+                    <Label Text="0" TextColor="White"
+                             FontSize="16" FontAttributes="Bold"
+                            VerticalOptions="Center" HorizontalOptions="End"                          
+                          Grid.Row="5"
+                           Grid.Column="1" x:Name="LBIncorrecto"
+                          Margin="0,0,0,0">
+                    </Label>
+            </Grid>
+            <Grid VerticalOptions="End" HorizontalOptions="Center"
+                      WidthRequest="193" HeightRequest="48"
+                  Grid.Row="2"
+                  Margin="0,0,160,4">
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>                    
+                    <Grid VerticalOptions="Start" HorizontalOptions="Center"
+                            WidthRequest="150" HeightRequest="29"
+                        Grid.Row="0" 
+                        Margin="0,-20,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="8*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Tapped="OnReload"
+                                        NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>
+                        <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                            <Button Clicked="btnreload_Clicked"
+                                BackgroundColor="#FABA00" TextColor="Transparent"
+                                CornerRadius="20"/>
+                        </Grid>
+                        <Label Text="&#xf01e;"
+                            FontFamily="{StaticResource FontAwesomeSolid}" FontSize="16"
+                            VerticalOptions="Center" HorizontalOptions="Center"
+                            Margin="9,0,0,0" Grid.Column="0"
+                                TextColor="White"/>                    
+                        <Label Grid.Column="1" VerticalOptions="Center"
+                                Text="Reintentar"
+                                FontSize="16"
+                                HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center"
+                                TextColor="White"
+                                Margin="-12,0,0,0"/>
+                    </Grid> 
+                </Grid> 
+            <Grid VerticalOptions="End" HorizontalOptions="Center"
+                      WidthRequest="193" HeightRequest="48"
+                  Grid.Row="2"
+                  Margin="160,0,0,4">
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>                    
+                    <Grid VerticalOptions="Start" HorizontalOptions="Center"
+                            WidthRequest="150" HeightRequest="29"
+                        Grid.Row="0" 
+                        Margin="0,-20,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="8*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Tapped="OnNext"
+                                        NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>
+                        <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                            <Button x:Name="btn6" Clicked="btn_Clicked"
+                                BackgroundColor="#FABA00" TextColor="Transparent"
+                                CornerRadius="20"/>
+                        </Grid>
+                        <Label Text="&#xf101;"
+                            FontFamily="{StaticResource FontAwesomeSolid}" FontSize="16"
+                            VerticalOptions="Center" HorizontalOptions="Center"
+                            Margin="9,0,0,0" Grid.Column="0"
+                                TextColor="White"/>                    
+                        <Label Grid.Column="1" VerticalOptions="Center"
+                                Text="Siguiene curso"
+                                FontSize="16"
+                                HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center"
+                                TextColor="White"
+                                Margin="-12,0,0,0"/>
+                    </Grid> 
+                </Grid>   
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EstudiosBiblicos.Vistas.WPrimerCurso">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0"
+              BackgroundColor="#F2F2F2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*"></RowDefinition>
+                <RowDefinition Height="67*"></RowDefinition>
+                <RowDefinition Height="18*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Label Text="Antes de continuar," TextColor="#9a9a9a"
+                     FontSize="20"
+                    VerticalOptions="Start" HorizontalOptions="Center"
+                      WidthRequest="185" HeightRequest="35"
+                  Grid.Row="0"                     
+                  Margin="46,12,30,0">
+            </Label>
+            <Label Text="Selecciona tu primer curso." TextColor="#9a9a9a"
+                     FontSize="20"
+                    VerticalOptions="Start" HorizontalOptions="Center"
+                      WidthRequest="245" HeightRequest="35"
+                  Grid.Row="0"                     
+                  Margin="36,34,30,0">
+            </Label>
+            <Grid ColumnSpacing="0" RowSpacing="0"
+                Grid.Row="1">                
+                <CollectionView x:Name="lvfooter" Margin="5,0,5,37"
+                        ItemsSource="{Binding Cursos}">
+                        <CollectionView.ItemsLayout>
+                                <GridItemsLayout
+                                    VerticalItemSpacing="5"
+                                    HorizontalItemSpacing="17"
+                                    Orientation="Horizontal" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>                                                       
+                                <Frame Padding="0" WidthRequest="250" HorizontalOptions="Start"
+                                    Margin="5,0,5,0" CornerRadius="13">                                    
+                                            <Grid>
+                                                <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                            Tapped="OnTapSelected"
+                                                            NumberOfTapsRequired="1" />
+                                                </Grid.GestureRecognizers>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="15*"></RowDefinition>
+                                                    <RowDefinition Height="45*"></RowDefinition>
+                                                    <RowDefinition Height="25*"></RowDefinition>
+                                                    <RowDefinition Height="15*"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Image Source="{Binding Imagen}" VerticalOptions="FillAndExpand"
+                                                        HorizontalOptions="FillAndExpand" Aspect="AspectFill"
+                                                        Grid.Row="0" Grid.RowSpan="2"/>
+                                                <Label Text="&#xf058;" x:Name="lblselected"
+                                                   FontFamily="{StaticResource FontAwesomeRegular}" FontSize="38"
+                                                   VerticalOptions="Center" HorizontalOptions="End"
+                                                   Margin="0,9,18,0" Grid.Column="0"
+                                                       TextColor="#3fd97a"
+                                                       IsVisible="false"/> 
+                                                <Label Text="{Binding Nombre}" TextColor="#AAAAAA"
+                                                         FontSize="26"
+                                                        VerticalOptions="Start" HorizontalOptions="Center"                                                         
+                                                      Grid.Row="2"                     
+                                                      Margin="10,30,10,0">
+                                                </Label>
+                                                <Grid Grid.Row="3">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Text="{Binding CntLecciones}" TextColor="#98BCE2"
+                                                             FontSize="14" 
+                                                            VerticalOptions="Center" HorizontalOptions="End"                                                          
+                                                          Grid.Column="0"                     
+                                                          Margin="0,0,0,0">
+                                                    </Label>
+                                                    <Label Text="&#xf037;"
+                                                       FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                                       VerticalOptions="Center" HorizontalOptions="Center"
+                                                       Margin="0,0,50,0" Grid.Column="0"
+                                                           TextColor="#98BCE2"/>
+
+                                                    <Label Text="{Binding CntDuracion}" TextColor="#98BCE2"
+                                                             FontSize="14" 
+                                                            VerticalOptions="Center" HorizontalOptions="Start"                                                          
+                                                          Grid.Column="1"                     
+                                                          Margin="30,0,0,0">
+                                                    </Label>
+                                                    <Label Text="&#xf017;"
+                                                       FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                                       VerticalOptions="Center" HorizontalOptions="Start"
+                                                       Margin="10,0,50,0" Grid.Column="1"
+                                                           TextColor="#98BCE2"/> 
+                                                </Grid>
+                                            </Grid>
+                                </Frame> 
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                </CollectionView> 
+            </Grid>            
+            <Button VerticalOptions="Center" HorizontalOptions="Center"
+                      WidthRequest="120" HeightRequest="35"
+                  Grid.Row="2" Text="Continuar" BackgroundColor="#3f8ad9"
+                  Margin="0,0,0,64" CornerRadius="20" TextColor="White"
+                    FontSize="12" Clicked="Button_Clicked"
+                    Padding="0"/>
+            <Label Text="Elegir más adelante..." TextColor="#AAAAAA"
+                     FontSize="19"
+                    VerticalOptions="End" HorizontalOptions="Center"
+                      WidthRequest="185" HeightRequest="35"
+                  Grid.Row="2"                     
+                  Margin="32,0,30,10">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Tapped="OnTapMasAdelante"
+                            NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

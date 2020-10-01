@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EstudiosBiblicos.Vistas.WDetalleCurso2"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0"
+              BackgroundColor="#F2F2F2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="12*"></RowDefinition>
+                <RowDefinition Height="74*"></RowDefinition>
+                <RowDefinition Height="14*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Source="fondo1" Grid.Column="0"
+                   Grid.Row="0" Grid.RowSpan="3" VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   Aspect="AspectFill"/>
+            <Grid HorizontalOptions="FillAndExpand"                                                     
+                          Margin="0,0,0,0" Grid.Row="0"
+                  Opacity="1"
+                  VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="7*"></RowDefinition>
+                    <RowDefinition Height="3*"></RowDefinition>
+                </Grid.RowDefinitions>                                
+                <Label Text="{Binding NombreCurso}" TextColor="White"
+                         FontSize="25"
+                        VerticalOptions="Center" HorizontalOptions="Center"                          
+                      Grid.Row="0"                     
+                      Margin="0,2,0,0">
+                </Label>
+                <Label Text="" TextColor="White"
+                         FontSize="16"
+                        VerticalOptions="Center" HorizontalOptions="Center"                          
+                      Grid.Row="1"                     
+                      Margin="0,0,0,0">
+                </Label>
+            </Grid>
+            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="Center"                                                     
+                          Margin="0,0,0,0" Grid.Row="1"
+                  Opacity="1">
+                <StackLayout Orientation="Vertical">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions> 
+                        <Frame Padding="0" HorizontalOptions="Center"
+                            Margin="0,0,0,40" CornerRadius="4"
+                                HeightRequest="150" WidthRequest="180"
+                                Grid.Row="0" VerticalOptions="End">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Tapped="OnTapPreguntas"
+                                        NumberOfTapsRequired="1" />
+                            </Frame.GestureRecognizers>
+                                    <Grid>                                                
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="6*"></ColumnDefinition>
+                                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>                                        
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="50*"></RowDefinition>
+                                            <RowDefinition Height="25*"></RowDefinition>
+                                            <RowDefinition Height="25*"></RowDefinition>
+                                        </Grid.RowDefinitions> 
+                                        <Label Text="&#xf017;"
+                                           FontFamily="{StaticResource FontAwesomeSolid}"
+                                               FontSize="55"
+                                           VerticalOptions="Center" HorizontalOptions="Center"
+                                           Margin="0,0,0,-25" Grid.ColumnSpan="2" Grid.Row="0"
+                                               TextColor="#9A9A9A"/>  
+                                        <Label Text="Responde con!" TextColor="#AAAAAA"
+                                                    FontSize="14" HorizontalTextAlignment="Center"
+                                                VerticalOptions="Center" HorizontalOptions="FillAndExpand"                                                          
+                                                Grid.ColumnSpan="2"     Grid.Row="1"                 
+                                                Margin="10,0,10,0">
+                                        </Label>
+                                        <Label Text="9 preguntas" TextColor="#AAAAAA"
+                                                    FontSize="14" HorizontalTextAlignment="Center"
+                                                VerticalOptions="Start" HorizontalOptions="Center" 
+                                                Grid.Column="0"       Grid.Row="2"               
+                                                Margin="0,0,0,0"
+                                                x:Name="lblmultpreguntas">
+                                        </Label>
+                                        <Label Text="10 min" TextColor="#AAAAAA"
+                                                    FontSize="14" HorizontalTextAlignment="Center"
+                                                VerticalOptions="Start" HorizontalOptions="Center" 
+                                                Grid.Column="1"  Grid.Row="2"
+                                                Margin="0,0,0,0"
+                                               x:Name="lblmultTiempo">
+                                        </Label>                
+                                    </Grid>
+                        </Frame>
+                    </Grid>
+                    <Grid x:Name="Grid2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions> 
+                        <Frame Padding="0" HorizontalOptions="Center"
+                            Margin="0,0,0,0" CornerRadius="4"
+                                HeightRequest="150" WidthRequest="180"
+                                Grid.Row="0" VerticalOptions="Start">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                            Tapped="OnTapZopa"
+                                            NumberOfTapsRequired="1" />
+                                </Frame.GestureRecognizers>
+                                    <Grid>                                                
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>                                        
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="50*"></RowDefinition>
+                                            <RowDefinition Height="25*"></RowDefinition>
+                                            <RowDefinition Height="25*"></RowDefinition>
+                                        </Grid.RowDefinitions> 
+                                        <Label Text="&#xf249;"
+                                           FontFamily="{StaticResource FontAwesomeSolid}"
+                                               FontSize="55"
+                                           VerticalOptions="Center" HorizontalOptions="Center"
+                                           Margin="0,0,0,-25" Grid.ColumnSpan="1" Grid.Row="0"
+                                               TextColor="#9A9A9A"/>
+                                        <Label Text="¿Y ahora qué?" TextColor="#AAAAAA"
+                                                    FontSize="14" HorizontalTextAlignment="Center"
+                                                VerticalOptions="Center" HorizontalOptions="FillAndExpand"                                                          
+                                                Grid.ColumnSpan="1"     Grid.Row="1"                 
+                                                Margin="10,0,10,0">
+                                        </Label>
+                                        
+                                        <Label Text="10 min" TextColor="#AAAAAA"
+                                                    FontSize="14" HorizontalTextAlignment="Center"
+                                                VerticalOptions="Center" HorizontalOptions="Center" 
+                                                Grid.Column="0"       Grid.Row="2"               
+                                                Margin="0,0,0,0"
+                                               x:Name="lblTimesopa">
+                                        </Label>                
+                                    </Grid>
+                        </Frame>
+                    </Grid>  
+                </StackLayout>   
+            </Grid> 
+            <Grid VerticalOptions="End" HorizontalOptions="Center"
+                      WidthRequest="193" HeightRequest="48"
+                  Grid.Row="2"
+                  Margin="0,0,0,4">
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>                    
+                    <Button Grid.Column="0" Grid.ColumnSpan="3" 
+                        BackgroundColor="White" TextColor="Transparent"
+                        CornerRadius="30"/>
+                    <Grid Grid.Column="0" WidthRequest="30" HeightRequest="30"
+                          VerticalOptions="Center" HorizontalOptions="Center"
+                          Margin="0,3,-11,0">
+                        <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Tapped="OnTapMenuBuscar"
+                                        NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>
+                    <ffimageloadingsvg:SvgCachedImage 
+                                                      
+                                                      Source="resource://EstudiosBiblicos.Iconos.Search.svg"/>
+                    </Grid>
+                    <Grid Grid.Column="1" WidthRequest="90" HeightRequest="90"
+                          VerticalOptions="Center" HorizontalOptions="Center"
+                          Margin="-20,-5,-20,0">
+                        <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Tapped="OnTapMenuMisCursos"
+                                        NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>
+                    <ffimageloadingsvg:SvgCachedImage VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                        Source="resource://EstudiosBiblicos.Iconos.BibliaS.svg"/>
+                    </Grid>
+                    <Grid Grid.Column="2" WidthRequest="30" HeightRequest="30"
+                          VerticalOptions="Center" HorizontalOptions="Center"
+                          Margin="-10,3,0,0">
+                        <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Tapped="OnTapPerfil"
+                                        NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>
+                    <ffimageloadingsvg:SvgCachedImage VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                        Source="resource://EstudiosBiblicos.Iconos.accountS.svg"/>
+                    </Grid>
+                </Grid>   
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

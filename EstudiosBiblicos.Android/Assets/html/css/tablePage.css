@@ -1,0 +1,26 @@
+﻿:root {
+    --text-color: white;
+    --text-color-selected: white;
+    --tile-bk-color: transparent;
+    --tile-bk-color-selected: transparent;
+    --tile-border-color: transparent;
+    --tile-border-color-selected: transparent;
+    --div-bk-color: transparent;
+    --div-border-radius: 0px;
+    --div-border-size: 1px;
+    --div-margin-bottom: 15px;
+}
+
+body {
+    background-color: var(--div-bk-color);
+    margin: 0;
+    overflow: hidden;
+}
+
+.mainTable {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: var(--div-bk-color);
+}
+

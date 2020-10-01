@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+    <pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EstudiosBiblicos.Vistas.PopUpFinalizado"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             CloseWhenBackgroundIsClicked="False">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation DurationIn="200"
+                                   DurationOut="200"
+                                   EasingIn="SinOut"
+                                   EasingOut="SinIn"                                   
+                                   HasBackgroundAnimation="True"
+                                   PositionIn="Center"
+                                   PositionOut="Center"
+                                   ScaleIn="1.2"
+                                   ScaleOut="0.8" />
+    </pages:PopupPage.Animation>
+    <!--  You can use any elements here which are extended from Xamarin.Forms.View  -->
+    <StackLayout Padding="1,0,1,0"
+                 HorizontalOptions="Center" VerticalOptions="Center">
+        
+        <Grid VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand"
+              HeightRequest="240">            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="9*"/>
+            </Grid.RowDefinitions>
+            <Grid VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand"
+              Grid.Row="1">            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Frame Padding="0" HeightRequest="180" HorizontalOptions="FillAndExpand"
+                Margin="20,0,20,0" CornerRadius="10" BackgroundColor="White"
+                   Grid.Row="0" >
+                    <Grid x:Name="grid1" VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25*"/>
+                            <RowDefinition Height="25*"/>
+                            <RowDefinition Height="40*"/>
+                            <RowDefinition Height="10*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Grid Grid.Row="1">           
+                            <Label Text="!Felicidades¡" TextColor="#3F8AD9"
+                                        FontSize="28"
+                                    VerticalOptions="Start"
+                                   HorizontalOptions="Center"                                                                                                                   
+                                    Margin="0,0,0,0"
+                                   >
+                            </Label>
+                        </Grid>
+                        <Grid Grid.Row="2">           
+                            <Label Text="Completaste el curso correctamente" TextColor="#3F8AD9"
+                                        FontSize="23"
+                                    VerticalOptions="Start"
+                                   HorizontalOptions="Center"
+                                   HorizontalTextAlignment="Center"
+                                    Margin="20,0,20,0">
+                            </Label>
+                        </Grid>
+                    </Grid>    
+            </Frame>
+            <Grid VerticalOptions="Start" HorizontalOptions="Center"
+                    WidthRequest="150" HeightRequest="29"
+                Grid.Row="1" 
+                Margin="0,-20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="8*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Tapped="OnNext"
+                                NumberOfTapsRequired="1" />
+                </Grid.GestureRecognizers>
+                <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                    <Button x:Name="btn6" Clicked="btn_Clicked"
+                        BackgroundColor="#FABA00" TextColor="Transparent"
+                        CornerRadius="20"/>
+                </Grid>
+                <Label Text="&#xf101;"
+                    FontFamily="{StaticResource FontAwesomeSolid}" FontSize="16"
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                    Margin="9,0,0,0" Grid.Column="0"
+                        TextColor="White"/>                    
+                <Label Grid.Column="1" VerticalOptions="Center"
+                        Text="Siguiene curso"
+                        FontSize="16"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        TextColor="White"
+                        Margin="-12,0,0,0"/>
+            </Grid>  
+                
+        </Grid>
+        <Frame Padding="0" HeightRequest="130"
+                    HorizontalOptions="Center"
+                Margin="0,0,0,-50" CornerRadius="50"
+                    BackgroundColor="White"
+                 Grid.Row="0"
+                    WidthRequest="75"
+                   VerticalOptions="Start">
+                        <Image Source="celeb" 
+                            Grid.Row="0" VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            Aspect="AspectFill"/>
+            </Frame> 
+        </Grid>
+    </StackLayout>
+</pages:PopupPage>

@@ -1,0 +1,187 @@
+﻿@font-face {
+   font-family: 'digital-7';
+   src: url('digital-7.ttf');
+}
+
+:root {
+    --text-color: white;
+    --text-color-hidden: #ADD8E6;
+    --text-color-selected: white;
+    --div-bk-color: transparent;
+}
+
+body {
+    background-color: var(--div-bk-color);
+    margin: 0;
+    overflow: hidden;
+}
+
+#wordsList {
+    background-color: var(--div-bk-color);
+    height: 50px;
+    text-align: center;
+    position: relative;
+}
+
+#scoreBoard {
+    height: 50px;
+    line-height: 50px;
+}
+
+#score {
+    float: left;
+    height: 100%;
+    width: 50%;
+}
+
+#timeClock {
+    float: right;
+    height: 100%;
+    width: 50%;
+}
+
+.wordDiv {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+}
+
+.wordHiddenDiv {
+    color: var(--text-color-hidden);
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+}
+
+.wordCompleteDiv {
+    color: red;
+    text-decoration: line-through;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+}
+
+.digitalText {
+    color: white;
+    background-color: transparent;
+    font-family: 'digital-7', sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+table.headerTable {
+    border: 0px;
+    background-color: var(--div-bk-color);
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+}
+
+    table.headerTable td, table.headerTable th {
+        border: 0px solid transparent;
+        padding: 2px 2px;
+        width: 25%;
+    }
+
+    table.headerTable tbody td {
+        font-size: 13px;
+        color: transparent;
+    }
+
+table.headerTable2 {
+    border: 0px;
+    background-color: var(--div-bk-color);
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+}
+
+    table.headerTable2 td, table.headerTable2 th {
+        border: 0px solid transparent;
+        padding: 0px;
+        width: 12%;
+    }
+
+    table.headerTable2 tbody td {
+        color: transparent;
+    }
+
+#winner {
+    display: none;
+    background-color: var(--div-bk-color);
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    line-height: 50px;
+    top: 50px;
+    font-size: xx-large;
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+.ml15 {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 800;
+    font-size: 3.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    text-align: center;
+    display: none;
+}
+
+.ml15 .word {
+    display: inline-block;
+    line-height: 1em;
+    color: red;
+}

@@ -1,0 +1,1459 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EstudiosBiblicos.Vistas.WCursoSelMult9"
+             xmlns:local="clr-namespace:EstudiosBiblicos"
+             xmlns:ia="clr-namespace:IntelliAbb.Xamarin.Controls;assembly=IntelliAbb.Xamarin.Controls"
+             xmlns:controls="clr-namespace:EstudiosBiblicos.Custom;assembly=EstudiosBiblicos"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0"
+              BackgroundColor="#F2F2F2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="18*"></RowDefinition>
+                <RowDefinition Height="68*"></RowDefinition>
+                <RowDefinition Height="14*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Source="fondo1" Grid.Column="0"
+                   Grid.Row="0" Grid.RowSpan="3" VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   Aspect="AspectFill"/>
+            <Grid HorizontalOptions="FillAndExpand"                                                     
+                          Margin="0,0,0,0" Grid.Row="0"
+                  Opacity="1"
+                  VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"></RowDefinition>
+                    <RowDefinition Height="4*"></RowDefinition>
+                    <RowDefinition Height="3*"></RowDefinition>
+                </Grid.RowDefinitions>                
+                <controls:GradientProgressBar
+                    AlternativeTextColor="#0463E1"
+                    BarBackgroundColor="White"
+                    CornerRadius="20"
+                    FontSize="10"
+                    GradientEndColor="#3FD97A"
+                    GradientStartColor="#3FD97A"
+                    HeightRequest="18"
+                    Percentage="{Binding Progreso}"
+                    Grid.Row="0"
+                    TextColor="White"
+                    Margin="28,3,28,0"
+                    VerticalOptions="Center"
+                    x:Name="PB1"/>
+                <Label Text="La Fe de Jesús" TextColor="White"
+                         FontSize="25"
+                        VerticalOptions="Center" HorizontalOptions="Center"                          
+                      Grid.Row="1"                     
+                      Margin="0,0,0,0"
+                       x:Name="TbCurso">
+                </Label>
+                <Label Text="Selecciona la respuesta correcta" TextColor="White"
+                         FontSize="16"
+                        VerticalOptions="Center" HorizontalOptions="Center"                          
+                      Grid.Row="2"                     
+                      Margin="0,0,0,0">
+                </Label>
+            </Grid>
+            <Grid HorizontalOptions="Center"                                                     
+                          Margin="0,0,0,0" Grid.Row="1"
+                  Opacity="1" VerticalOptions="FillAndExpand">
+                <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Default"
+                        Margin="10,0,10,0" VerticalOptions="FillAndExpand">
+                    <StackLayout>
+                                <Grid VerticalOptions="Start">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="90*"></RowDefinition>
+                                        <RowDefinition Height="10*"></RowDefinition>
+                                    </Grid.RowDefinitions> 
+                                <Frame Padding="0" HorizontalOptions="FillAndExpand"
+                                    Margin="7,16,7,0" CornerRadius="10"
+                                       HeightRequest="144"
+                                       Grid.Row="0">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="3*"></RowDefinition>
+                                                    <RowDefinition Height="6*"></RowDefinition>
+                                                    <RowDefinition Height="1*"></RowDefinition>
+                                                </Grid.RowDefinitions>                                                                                                
+                                                <Label Text="¿Quién da los dones espirituales?" TextColor="#AAAAAA"
+                                                         FontSize="16" HorizontalTextAlignment="Center"
+                                                        VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                                                          WidthRequest="185"
+                                                      Grid.Row="0"  FontAttributes="Bold"                   
+                                                      Margin="15,2,15,0">
+                                                </Label>                                                
+                                                <Grid Grid.Row="1" VerticalOptions="Start">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="3*"></RowDefinition>
+                                                        <RowDefinition Height="3*"></RowDefinition>
+                                                        <RowDefinition Height="3*"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="15*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="85*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <ia:Checkbox x:Name="P1chk1"
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="0"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                                 IsChecked="{Binding S1}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Jesús"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Center"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="0"/>
+
+                                                    <ia:Checkbox x:Name="P1chk2"
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="1"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                                 IsChecked="{Binding S2}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="El Espíritu Santo"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Center"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="1"/>
+
+                                                    <ia:Checkbox x:Name="P1chk3"
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="2"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                                 IsChecked="{Binding S3}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Los ángeles"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Center"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="2"/>
+                                                </Grid>                                                                                                                                                                                                   
+                                            </Grid>
+                                </Frame>
+                                    <Button Grid.Row="0" Padding="0"
+                                        BackgroundColor="#3F8AD9" TextColor="White"
+                                        CornerRadius="28" Text="1" FontSize="18"
+                                        VerticalOptions="Start" HorizontalOptions="Start"
+                                        WidthRequest="30" HeightRequest="28"
+                                        Margin="0,4,0,0"/>
+                                    <Grid VerticalOptions="Start" HorizontalOptions="Center"
+                                              WidthRequest="120" HeightRequest="29"
+                                          Grid.Row="1"
+                                          Margin="0,-20,0,0">                                        
+                                            <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                            Tapped="OnTapTB1"
+                                                            NumberOfTapsRequired="1" />
+                                            </Grid.GestureRecognizers>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                                                <ColumnDefinition Width="7*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                                                <Button x:Name="btn1" Clicked="btn1_Clicked"
+                                                    BackgroundColor="#3f8ad9" TextColor="Transparent"
+                                                    CornerRadius="20"/>
+                                            </Grid>
+                                            <Label Text="&#xf06e;"
+                                               FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                               VerticalOptions="Center" HorizontalOptions="Center"
+                                               Margin="9,0,0,0" Grid.Column="0"
+                                                   TextColor="White"/>                 
+                                            <Label Grid.Column="1" VerticalOptions="Center"
+                                                   Text="Santiago 2:12"
+                                                   FontSize="12"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   HorizontalTextAlignment="Center"
+                                                   TextColor="White"
+                                                   Margin="-10,0,0,0"/>
+                                        </Grid> 
+                                </Grid>
+                                <Grid VerticalOptions="Start">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="90*"></RowDefinition>
+                                        <RowDefinition Height="10*"></RowDefinition>
+                                    </Grid.RowDefinitions> 
+                                <Frame Padding="0" HorizontalOptions="FillAndExpand"
+                                    Margin="7,16,7,0" CornerRadius="10"
+                                       HeightRequest="184"
+                                       Grid.Row="0">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="3*"></RowDefinition>
+                                                    <RowDefinition Height="6*"></RowDefinition>
+                                                    <RowDefinition Height="1*"></RowDefinition>
+                                                </Grid.RowDefinitions>                                                                                                
+                                                <Label Text="¿Para qué son dados los dones espirituales?" TextColor="#AAAAAA"
+                                                         FontSize="16" HorizontalTextAlignment="Center"
+                                                        VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                                                          WidthRequest="145"
+                                                      Grid.Row="0"  FontAttributes="Bold"               
+                                                      Margin="15,2,15,0">
+                                                </Label>                                                
+                                                <Grid Grid.Row="1" VerticalOptions="Start">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="4*"></RowDefinition>
+                                                        <RowDefinition Height="3*"></RowDefinition>
+                                                        <RowDefinition Height="3*"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <ia:Checkbox 
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="0"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S4}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Para perfeccionar a los santos"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="0"/>
+
+                                                    <ia:Checkbox
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="1"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S5}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Para lucirnos delante del Señor"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="1"/>
+
+                                                    <ia:Checkbox
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="2"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S6}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Para que nos vean"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Center"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="2"/>
+                                                </Grid>                                                                                                                                                                                                   
+                                            </Grid>
+                                </Frame>
+                                    <Button Grid.Row="0" Padding="0"
+                                        BackgroundColor="#3F8AD9" TextColor="White"
+                                        CornerRadius="28" Text="2" FontSize="18"
+                                        VerticalOptions="Start" HorizontalOptions="Start"
+                                        WidthRequest="30" HeightRequest="28"
+                                        Margin="0,4,0,0"/>
+                                    <Grid VerticalOptions="Start" HorizontalOptions="Center"
+                                              WidthRequest="130" HeightRequest="29"
+                                          Grid.Row="1"
+                                          Margin="0,-20,0,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                                <ColumnDefinition Width="8*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                            Tapped="OnTapTB2"
+                                                            NumberOfTapsRequired="1" />
+                                            </Grid.GestureRecognizers>
+                                            <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                                                <Button x:Name="btn2" Clicked="btn2_Clicked"
+                                                    BackgroundColor="#3f8ad9" TextColor="Transparent"
+                                                    CornerRadius="20"/>
+                                            </Grid>
+                                            <Label Text="&#xf06e;"
+                                               FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                               VerticalOptions="Center" HorizontalOptions="Center"
+                                               Margin="9,0,0,0" Grid.Column="0"
+                                                   TextColor="White"/>                    
+                                            <Label Grid.Column="1" VerticalOptions="Center"
+                                                   Text="Efesios 4:11-15"
+                                                   FontSize="12"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   HorizontalTextAlignment="Center"
+                                                   TextColor="White"
+                                                   Margin="-10,0,0,0"/>
+                                        </Grid> 
+                                </Grid>
+                                <Grid VerticalOptions="Start">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="90*"></RowDefinition>
+                                        <RowDefinition Height="10*"></RowDefinition>
+                                    </Grid.RowDefinitions> 
+                                <Frame Padding="0" HorizontalOptions="FillAndExpand"
+                                    Margin="7,16,7,0" CornerRadius="10"
+                                       HeightRequest="214"
+                                       Grid.Row="0">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="3*"></RowDefinition>
+                                                    <RowDefinition Height="6*"></RowDefinition>
+                                                    <RowDefinition Height="1*"></RowDefinition>
+                                                </Grid.RowDefinitions>                                                                                                
+                                                <Label Text="¿Cómo se evidenció el derramamiento del Espíritu Santo en Pentecostés?" TextColor="#AAAAAA"
+                                                         FontSize="16" HorizontalTextAlignment="Center"
+                                                        VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                                                          WidthRequest="185"
+                                                      Grid.Row="0"  FontAttributes="Bold"                    
+                                                      Margin="15,2,15,0">
+                                                </Label>                                                
+                                                <Grid Grid.Row="1" VerticalOptions="Start">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="3*"></RowDefinition>
+                                                        <RowDefinition Height="3*"></RowDefinition>
+                                                        <RowDefinition Height="3*"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="15*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="85*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <ia:Checkbox 
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="0"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S7}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Por la manifestación de los dones espirituales"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,10,0"
+                                                           Grid.Row="0"/>
+
+                                                    <ia:Checkbox
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="1"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S8}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Porque las personas se arrepintieron"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,10,0"
+                                                           Grid.Row="1"/>
+
+                                                    <ia:Checkbox
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="2"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S9}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Porque los discípulos no durmieron más"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="2"/>
+                                                </Grid>                                                                                                                                                                                                   
+                                            </Grid>
+                                </Frame>
+                                    <Button Grid.Row="0" Padding="0"
+                                        BackgroundColor="#3F8AD9" TextColor="White"
+                                        CornerRadius="28" Text="3" FontSize="18"
+                                        VerticalOptions="Start" HorizontalOptions="Start"
+                                        WidthRequest="30" HeightRequest="28"
+                                        Margin="0,4,0,0"/>
+                                    <Grid VerticalOptions="Start" HorizontalOptions="Center"
+                                              WidthRequest="110" HeightRequest="29"
+                                          Grid.Row="1" 
+                                          Margin="0,-20,0,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="25*"></ColumnDefinition>
+                                                <ColumnDefinition Width="75*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                            Tapped="OnTapTB8"
+                                                            NumberOfTapsRequired="1" />
+                                            </Grid.GestureRecognizers>
+                                            <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                                                <Button x:Name="btn8" Clicked="btn8_Clicked"
+                                                    BackgroundColor="#3f8ad9" TextColor="Transparent"
+                                                    CornerRadius="20"/>
+                                            </Grid>
+                                            <Label Text="&#xf06e;"
+                                               FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                               VerticalOptions="Center" HorizontalOptions="Center"
+                                               Margin="9,0,0,0" Grid.Column="0"
+                                                   TextColor="White"/>                    
+                                            <Label Grid.Column="1" VerticalOptions="Center"
+                                                   Text="Hechos 2: 4"
+                                                   FontSize="12"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   HorizontalTextAlignment="Center"
+                                                   TextColor="White"
+                                                   Margin="-10,0,0,0"/>
+                                        </Grid>
+                                </Grid>
+                                <Grid VerticalOptions="Start">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="90*"></RowDefinition>
+                                        <RowDefinition Height="10*"></RowDefinition>
+                                    </Grid.RowDefinitions> 
+                                <Frame Padding="0" HorizontalOptions="FillAndExpand"
+                                    Margin="7,16,7,0" CornerRadius="10"
+                                       HeightRequest="364"
+                                       Grid.Row="0">
+                                            <Grid ColumnSpacing="0" RowSpacing="0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="10*"></RowDefinition>
+                                                    <RowDefinition Height="87*"></RowDefinition>
+                                                    <RowDefinition Height="3*"></RowDefinition>
+                                                </Grid.RowDefinitions>                                                                                                
+                                                <Label Text="Enlista siete dones espirituales" TextColor="#AAAAAA"
+                                                         FontSize="16" HorizontalTextAlignment="Center"
+                                                        VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                                                          WidthRequest="185"
+                                                      Grid.Row="0"  FontAttributes="Bold"                    
+                                                      Margin="15,2,15,0">
+                                                </Label>                                                
+                                                <Grid Grid.Row="1" VerticalOptions="Start">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="14*"></RowDefinition>
+                                                        <RowDefinition Height="14*"></RowDefinition>
+                                                        <RowDefinition Height="14*"></RowDefinition>
+                                                        <RowDefinition Height="14*"></RowDefinition>
+                                                        <RowDefinition Height="14*"></RowDefinition>
+                                                        <RowDefinition Height="14*"></RowDefinition>
+                                                        <RowDefinition Height="14*"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="10*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="90*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>                                                    
+                                                    <Label Grid.Column="0" VerticalOptions="Center"
+                                                           Text="a."
+                                                           FontSize="18"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="10,0,0,0"
+                                                           Grid.Row="0"/>
+                                                    <Entry Grid.Column="1" VerticalOptions="FillAndExpand"                                                                                                                      
+                                                           HorizontalOptions="FillAndExpand"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="0,0,10,0"
+                                                           Grid.Row="0"  Text="{Binding T1}"                                                         
+                                                           FontSize="12"/>
+                                                    
+                                                    <Label Grid.Column="0" VerticalOptions="Center"
+                                                           Text="b."
+                                                           FontSize="18"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="10,0,0,0"
+                                                           Grid.Row="1"/>
+                                                    <Entry Grid.Column="1" VerticalOptions="End"                                                                                                                      
+                                                           HorizontalOptions="FillAndExpand"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="0,0,10,0"
+                                                           Grid.Row="1" Text="{Binding T2}"
+                                                           FontSize="12"/>
+                                                                                                       
+                                                    <Label Grid.Column="0" VerticalOptions="Center"
+                                                           Text="c."
+                                                           FontSize="18"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="10,0,0,0"
+                                                           Grid.Row="2"/>
+                                                    <Entry Grid.Column="1" VerticalOptions="End"                                                                                                                      
+                                                           HorizontalOptions="FillAndExpand"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="0,0,10,0"
+                                                           Grid.Row="2" Text="{Binding T3}"
+                                                           FontSize="12"/>
+                                                                                                       
+                                                    <Label Grid.Column="0" VerticalOptions="Center"
+                                                           Text="d."
+                                                           FontSize="18"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="10,0,0,0"
+                                                           Grid.Row="3"/>
+                                                    <Entry Grid.Column="1" VerticalOptions="End"                                                                                                                      
+                                                           HorizontalOptions="FillAndExpand"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="0,0,10,0"
+                                                           Grid.Row="3" Text="{Binding T4}"
+                                                           FontSize="12"/>
+                                                                                                       
+                                                    <Label Grid.Column="0" VerticalOptions="Center"
+                                                           Text="e."
+                                                           FontSize="18"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="10,0,0,0"
+                                                           Grid.Row="4"/>
+                                                    <Entry Grid.Column="1" VerticalOptions="End"                                                                                                                      
+                                                           HorizontalOptions="FillAndExpand"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="0,0,10,0"
+                                                           Grid.Row="4" Text="{Binding T5}"
+                                                           FontSize="12"/>
+
+
+                                                    <Label Grid.Column="0" VerticalOptions="Center"
+                                                           Text="f."
+                                                           FontSize="18"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="10,0,0,0"
+                                                           Grid.Row="5"/>
+                                                    <Entry Grid.Column="1" VerticalOptions="End"                                                                                                                      
+                                                           HorizontalOptions="FillAndExpand"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="0,0,10,0"
+                                                           Grid.Row="5" Text="{Binding T6}"
+                                                           FontSize="12"/>
+                                                    
+                                                    <Label Grid.Column="0" VerticalOptions="Center"
+                                                           Text="g."
+                                                           FontSize="18"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="10,0,0,0"
+                                                           Grid.Row="6"/>
+                                                    <Entry Grid.Column="1" VerticalOptions="End"                                                                                                                      
+                                                           HorizontalOptions="FillAndExpand"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="0,0,10,0"
+                                                           Grid.Row="6" Text="{Binding T7}"
+                                                           FontSize="12"/>
+                                                         
+                                                </Grid>                                                                                                                                                                                                   
+                                            </Grid>
+                                </Frame>
+                                    <Button Grid.Row="0" Padding="0"
+                                        BackgroundColor="#3F8AD9" TextColor="White"
+                                        CornerRadius="28" Text="4" FontSize="18"
+                                        VerticalOptions="Start" HorizontalOptions="Start"
+                                        WidthRequest="30" HeightRequest="28"
+                                        Margin="0,4,0,0"/>
+                                    <Grid VerticalOptions="Start" HorizontalOptions="Center"
+                                              WidthRequest="160" HeightRequest="29"
+                                          Grid.Row="1" 
+                                          Margin="0,-20,0,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                                                <ColumnDefinition Width="7*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                            Tapped="OnTapTB10"
+                                                            NumberOfTapsRequired="1" />
+                                            </Grid.GestureRecognizers>
+                                            <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                                                <Button x:Name="btn1250" Clicked="btn10_Clicked"
+                                                    BackgroundColor="#3f8ad9" TextColor="Transparent"
+                                                    CornerRadius="20"/>
+                                            </Grid>
+                                            <Label Text="&#xf06e;"
+                                               FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                               VerticalOptions="Center" HorizontalOptions="Center"
+                                               Margin="9,0,0,0" Grid.Column="0"
+                                                   TextColor="White"/>                    
+                                            <Label Grid.Column="1" VerticalOptions="Center"
+                                                   Text="1 Corintios 12:7-11"
+                                                   FontSize="12"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   HorizontalTextAlignment="Center"
+                                                   TextColor="White"
+                                                   Margin="-10,0,0,0"/>
+                                        </Grid> 
+                                </Grid>
+                                <Grid VerticalOptions="Start">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="90*"></RowDefinition>
+                                        <RowDefinition Height="10*"></RowDefinition>
+                                    </Grid.RowDefinitions> 
+                                <Frame Padding="0" HorizontalOptions="FillAndExpand"
+                                    Margin="7,16,7,0" CornerRadius="10"
+                                       HeightRequest="184"
+                                       Grid.Row="0">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="25*"></RowDefinition>
+                                                    <RowDefinition Height="65*"></RowDefinition>
+                                                    <RowDefinition Height="10*"></RowDefinition>
+                                                </Grid.RowDefinitions>                                                                                                
+                                                <Label Text="¿Cuál es el don más grande?" TextColor="#AAAAAA"
+                                                         FontSize="16" HorizontalTextAlignment="Center"
+                                                        VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                                                          WidthRequest="185"
+                                                      Grid.Row="0" FontAttributes="Bold"                     
+                                                      Margin="15,2,15,0">
+                                                </Label>                                                
+                                                <Grid Grid.Row="1" VerticalOptions="Start">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="3*"></RowDefinition>
+                                                        <RowDefinition Height="4*"></RowDefinition>
+                                                        <RowDefinition Height="3*"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="15*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="85*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <ia:Checkbox 
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="0"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S10}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="El don de lenguas"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Center"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="0"/>
+
+                                                    <ia:Checkbox
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="1"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S11}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="El don de profecía"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="1"/>
+
+                                                    <ia:Checkbox
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="2"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S12}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="El don del amor"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="2"/>
+                                                </Grid>                                                                                                                                                                                                   
+                                            </Grid>
+                                </Frame>
+                                    <Button Grid.Row="0" Padding="0"
+                                        BackgroundColor="#3F8AD9" TextColor="White"
+                                        CornerRadius="28" Text="5" FontSize="18"
+                                        VerticalOptions="Start" HorizontalOptions="Start"
+                                        WidthRequest="30" HeightRequest="28"
+                                        Margin="0,4,0,0"/>
+                                    <Grid VerticalOptions="Start" HorizontalOptions="Center"
+                                              WidthRequest="120" HeightRequest="29"
+                                          Grid.Row="1" 
+                                          Margin="0,-20,0,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="25*"></ColumnDefinition>
+                                                <ColumnDefinition Width="75*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                            Tapped="OnTapTB4"
+                                                            NumberOfTapsRequired="1" />
+                                            </Grid.GestureRecognizers>
+                                            <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                                                <Button x:Name="btn4" Clicked="btn4_Clicked"
+                                                    BackgroundColor="#3f8ad9" TextColor="Transparent"
+                                                    CornerRadius="20"/>
+                                            </Grid>
+                                            <Label Text="&#xf06e;"
+                                               FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                               VerticalOptions="Center" HorizontalOptions="Center"
+                                               Margin="9,0,0,0" Grid.Column="0"
+                                                   TextColor="White"/>                    
+                                            <Label Grid.Column="1" VerticalOptions="Center"
+                                                   Text="1 Corintios 13"
+                                                   FontSize="12"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   HorizontalTextAlignment="Center"
+                                                   TextColor="White"
+                                                   Margin="-10,0,0,0"/>
+                                        </Grid>
+                                </Grid>
+                        
+                                <Grid VerticalOptions="Start">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="90*"></RowDefinition>
+                                        <RowDefinition Height="10*"></RowDefinition>
+                                    </Grid.RowDefinitions> 
+                                <Frame Padding="0" HorizontalOptions="FillAndExpand"
+                                    Margin="7,16,7,0" CornerRadius="10"
+                                       HeightRequest="184"
+                                       Grid.Row="0">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="25*"></RowDefinition>
+                                                    <RowDefinition Height="65*"></RowDefinition>
+                                                    <RowDefinition Height="10*"></RowDefinition>
+                                                </Grid.RowDefinitions>                                                                                                
+                                                <Label Text="¿Qué don en particular caracteriza la iglesia de Dios al findel tiempo?" TextColor="#AAAAAA"
+                                                         FontSize="16" HorizontalTextAlignment="Center"
+                                                        VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                                                          WidthRequest="185"
+                                                      Grid.Row="0"  FontAttributes="Bold"                    
+                                                      Margin="15,2,15,0">
+                                                </Label>                                                
+                                                <Grid Grid.Row="1" VerticalOptions="Start">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="3*"></RowDefinition>
+                                                        <RowDefinition Height="3*"></RowDefinition>
+                                                        <RowDefinition Height="3*"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="15*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="85*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <ia:Checkbox 
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="0"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S13}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="El don de profecía"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="0"/>
+
+                                                    <ia:Checkbox
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="1"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S14}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="El don de lenguas"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,10,0"
+                                                           Grid.Row="1"/>
+
+                                                    <ia:Checkbox
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="2"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S15}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="El don de sanidad"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="2"/>
+                                                </Grid>                                                                                                                                                                                                   
+                                            </Grid>
+                                </Frame>
+                                    <Button Grid.Row="0" Padding="0"
+                                        BackgroundColor="#3F8AD9" TextColor="White"
+                                        CornerRadius="28" Text="6" FontSize="18"
+                                        VerticalOptions="Start" HorizontalOptions="Start"
+                                        WidthRequest="30" HeightRequest="28"
+                                        Margin="0,4,0,0"/>
+                                    <Grid VerticalOptions="Start" HorizontalOptions="Center"
+                                              WidthRequest="165" HeightRequest="29"
+                                          Grid.Row="1" 
+                                          Margin="0,-20,0,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="25*"></ColumnDefinition>
+                                                <ColumnDefinition Width="75*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                            Tapped="OnTapTB8"
+                                                            NumberOfTapsRequired="1" />
+                                            </Grid.GestureRecognizers>
+                                            <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                                                <Button x:Name="btn83" Clicked="btn8_Clicked"
+                                                    BackgroundColor="#3f8ad9" TextColor="Transparent"
+                                                    CornerRadius="20"/>
+                                            </Grid>
+                                            <Label Text="&#xf06e;"
+                                               FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                               VerticalOptions="Center" HorizontalOptions="Center"
+                                               Margin="9,0,0,0" Grid.Column="0"
+                                                   TextColor="White"/>                    
+                                            <Label Grid.Column="1" VerticalOptions="Center"
+                                                   Text="Apocalipsis 12:17; 19:10"
+                                                   FontSize="12"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   HorizontalTextAlignment="Center"
+                                                   TextColor="White"
+                                                   Margin="-10,0,0,0"/>
+                                        </Grid>
+                                </Grid>
+                                <Grid VerticalOptions="Start">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="80*"></RowDefinition>
+                                        <RowDefinition Height="20*"></RowDefinition>
+                                    </Grid.RowDefinitions> 
+                                <Frame Padding="0" HorizontalOptions="FillAndExpand"
+                                    Margin="7,16,7,0" CornerRadius="10"
+                                       HeightRequest="504"
+                                       Grid.Row="0">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="10*"></RowDefinition>
+                                                    <RowDefinition Height="70*"></RowDefinition>
+                                                    <RowDefinition Height="20*"></RowDefinition>
+                                                </Grid.RowDefinitions>                                                                                                
+                                                <Label Text="Marque las evidencias bíblicas de un verdadero profeta" TextColor="#AAAAAA"
+                                                         FontSize="16" HorizontalTextAlignment="Center"
+                                                        VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                                                          WidthRequest="185"
+                                                      Grid.Row="0"   FontAttributes="Bold"                   
+                                                      Margin="15,2,15,0">
+                                                </Label>                                                
+                                                <Grid Grid.Row="1" VerticalOptions="Start">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="12*"></RowDefinition>
+                                                        <RowDefinition Height="12*"></RowDefinition>
+                                                        <RowDefinition Height="12*"></RowDefinition>
+                                                        <RowDefinition Height="12*"></RowDefinition>
+                                                        <RowDefinition Height="12*"></RowDefinition>
+                                                        <RowDefinition Height="12*"></RowDefinition>
+                                                        <RowDefinition Height="12*"></RowDefinition>
+                                                        <RowDefinition Height="12*"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="15*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="85*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <ia:Checkbox 
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="0"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S16}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Habla conforme a la ley de Dios"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="0"/>
+
+                                                    <ia:Checkbox
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="1"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S17}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Sus profecías se cumplen"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="1"/>
+
+                                                    <ia:Checkbox
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="2"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S18}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Tiene que ser un hombre"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Center"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,-10,0,0"
+                                                           Grid.Row="2"/>
+
+                                                    <ia:Checkbox 
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="3"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S19}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="No induce a la apostasía"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="3"/>
+
+                                                    <ia:Checkbox
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="4"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S20}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Declara lo que Dios le inspira y no habla de sí mismo"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="4"/>
+
+                                                    <ia:Checkbox
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="5"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S21}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Tiene que ser mujer"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Center"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,-10,0,0"
+                                                           Grid.Row="5"/>
+
+                                                    <ia:Checkbox 
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="6"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S22}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Reprueba el pecado"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="6"/>
+
+                                                    <ia:Checkbox
+                                                                OutlineColor="Blue"
+                                                                FillColor="Blue"
+                                                                CheckColor="White"
+                                                                Shape="Circle"
+                                                                Grid.Row="7"
+                                                                Grid.Column="0"
+                                                                HorizontalOptions="Start"
+                                                                Margin="14,1,0,0"
+                                                                WidthRequest="17"
+                                                        IsChecked="{Binding S23}"/>
+                                                    <Label Grid.Column="1" VerticalOptions="Center"
+                                                           Text="Cree en la divinidad de Jesús"
+                                                           FontSize="16"
+                                                           HorizontalOptions="Start"
+                                                           HorizontalTextAlignment="Start"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="-10,0,0,0"
+                                                           Grid.Row="7"/>
+                                                </Grid>                                                                                                                                                                                                   
+                                            </Grid>
+                                </Frame>
+                                    <Button Grid.Row="0" Padding="0"
+                                        BackgroundColor="#3F8AD9" TextColor="White"
+                                        CornerRadius="28" Text="7" FontSize="18"
+                                        VerticalOptions="Start" HorizontalOptions="Start"
+                                        WidthRequest="30" HeightRequest="28"
+                                        Margin="0,4,0,0"/><Grid VerticalOptions="Start" HorizontalOptions="Center"
+                                              WidthRequest="110" HeightRequest="29"
+                                          Grid.Row="1" 
+                                          Margin="120,-90,0,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="25*"></ColumnDefinition>
+                                                <ColumnDefinition Width="75*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                            Tapped="OnTapTB8"
+                                                            NumberOfTapsRequired="1" />
+                                            </Grid.GestureRecognizers>
+                                            <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                                                <Button Clicked="btn8_Clicked"
+                                                    BackgroundColor="#3f8ad9" TextColor="Transparent"
+                                                    CornerRadius="20"/>
+                                            </Grid>
+                                            <Label Text="&#xf06e;"
+                                               FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                               VerticalOptions="Center" HorizontalOptions="Center"
+                                               Margin="9,0,0,0" Grid.Column="0"
+                                                   TextColor="White"/>                    
+                                            <Label Grid.Column="1" VerticalOptions="Center"
+                                                   Text="Isaías 8: 20"
+                                                   FontSize="12"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   HorizontalTextAlignment="Center"
+                                                   TextColor="White"
+                                                   Margin="-10,0,0,0"/>
+                                        </Grid>
+                                    <Grid VerticalOptions="Start" HorizontalOptions="Center"
+                                              WidthRequest="120" HeightRequest="29"
+                                          Grid.Row="1" 
+                                          Margin="0,-90,120,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="25*"></ColumnDefinition>
+                                                <ColumnDefinition Width="75*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                            Tapped="OnTapTB9"
+                                                            NumberOfTapsRequired="1" />
+                                            </Grid.GestureRecognizers>
+                                            <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                                                <Button x:Name="btn9" Clicked="btn9_Clicked"
+                                                    BackgroundColor="#3f8ad9" TextColor="Transparent"
+                                                    CornerRadius="20"/>
+                                            </Grid>
+                                            <Label Text="&#xf06e;"
+                                               FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                               VerticalOptions="Center" HorizontalOptions="Center"
+                                               Margin="9,0,0,0" Grid.Column="0"
+                                                   TextColor="White"/>                    
+                                            <Label Grid.Column="1" VerticalOptions="Center"
+                                                   Text="Jeremías 28: 9"
+                                                   FontSize="12"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   HorizontalTextAlignment="Start"
+                                                   TextColor="White"
+                                                   Margin="0,0,0,0"/>
+                                        </Grid>
+                                    
+                                    <Grid VerticalOptions="Start" HorizontalOptions="Center"
+                                              WidthRequest="110" HeightRequest="29"
+                                          Grid.Row="1" 
+                                          Margin="120,-55,0,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="25*"></ColumnDefinition>
+                                                <ColumnDefinition Width="75*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                            Tapped="OnTapTB8"
+                                                            NumberOfTapsRequired="1" />
+                                            </Grid.GestureRecognizers>
+                                            <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                                                <Button x:Name="btn88" Clicked="btn8_Clicked"
+                                                    BackgroundColor="#3f8ad9" TextColor="Transparent"
+                                                    CornerRadius="20"/>
+                                            </Grid>
+                                            <Label Text="&#xf06e;"
+                                               FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                               VerticalOptions="Center" HorizontalOptions="Center"
+                                               Margin="9,0,0,0" Grid.Column="0"
+                                                   TextColor="White"/>                    
+                                            <Label Grid.Column="1" VerticalOptions="Center"
+                                                   Text="Deuteronomio 13:1-3"
+                                                   FontSize="12"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   HorizontalTextAlignment="Center"
+                                                   TextColor="White"
+                                                   Margin="-10,0,0,0"/>
+                                        </Grid>
+                                    <Grid VerticalOptions="Start" HorizontalOptions="Center"
+                                              WidthRequest="120" HeightRequest="29"
+                                          Grid.Row="1" 
+                                          Margin="0,-55,120,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="25*"></ColumnDefinition>
+                                                <ColumnDefinition Width="75*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                            Tapped="OnTapTB9"
+                                                            NumberOfTapsRequired="1" />
+                                            </Grid.GestureRecognizers>
+                                            <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                                                <Button x:Name="btn99" Clicked="btn9_Clicked"
+                                                    BackgroundColor="#3f8ad9" TextColor="Transparent"
+                                                    CornerRadius="20"/>
+                                            </Grid>
+                                            <Label Text="&#xf06e;"
+                                               FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                               VerticalOptions="Center" HorizontalOptions="Center"
+                                               Margin="9,0,0,0" Grid.Column="0"
+                                                   TextColor="White"/>                    
+                                            <Label Grid.Column="1" VerticalOptions="Center"
+                                                   Text="Jeremías 14: 14"
+                                                   FontSize="12"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   HorizontalTextAlignment="Start"
+                                                   TextColor="White"
+                                                   Margin="0,0,0,0"/>
+                                        </Grid>
+                                    
+                                    <Grid VerticalOptions="Start" HorizontalOptions="Center"
+                                              WidthRequest="110" HeightRequest="29"
+                                          Grid.Row="1" 
+                                          Margin="120,-20,0,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="25*"></ColumnDefinition>
+                                                <ColumnDefinition Width="75*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                            Tapped="OnTapTB8"
+                                                            NumberOfTapsRequired="1" />
+                                            </Grid.GestureRecognizers>
+                                            <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                                                <Button x:Name="btn898" Clicked="btn8_Clicked"
+                                                    BackgroundColor="#3f8ad9" TextColor="Transparent"
+                                                    CornerRadius="20"/>
+                                            </Grid>
+                                            <Label Text="&#xf06e;"
+                                               FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                               VerticalOptions="Center" HorizontalOptions="Center"
+                                               Margin="9,0,0,0" Grid.Column="0"
+                                                   TextColor="White"/>                    
+                                            <Label Grid.Column="1" VerticalOptions="Center"
+                                                   Text="Jeremías 23:22"
+                                                   FontSize="12"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   HorizontalTextAlignment="Center"
+                                                   TextColor="White"
+                                                   Margin="-10,0,0,0"/>
+                                        </Grid>
+                                    <Grid VerticalOptions="Start" HorizontalOptions="Center"
+                                              WidthRequest="120" HeightRequest="29"
+                                          Grid.Row="1" 
+                                          Margin="0,-20,120,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="25*"></ColumnDefinition>
+                                                <ColumnDefinition Width="75*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                            Tapped="OnTapTB9"
+                                                            NumberOfTapsRequired="1" />
+                                            </Grid.GestureRecognizers>
+                                            <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+                                                <Button x:Name="btn925" Clicked="btn9_Clicked"
+                                                    BackgroundColor="#3f8ad9" TextColor="Transparent"
+                                                    CornerRadius="20"/>
+                                            </Grid>
+                                            <Label Text="&#xf06e;"
+                                               FontFamily="{StaticResource FontAwesomeSolid}" FontSize="14"
+                                               VerticalOptions="Center" HorizontalOptions="Center"
+                                               Margin="9,0,0,0" Grid.Column="0"
+                                                   TextColor="White"/>                    
+                                            <Label Grid.Column="1" VerticalOptions="Center"
+                                                   Text="1 Juan 4:1-3"
+                                                   FontSize="12"
+                                                   HorizontalOptions="FillAndExpand"
+                                                   HorizontalTextAlignment="Start"
+                                                   TextColor="White"
+                                                   Margin="0,0,0,0"/>
+                                        </Grid> 
+                                </Grid>
+                        
+                                <Grid VerticalOptions="Start">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="90*"></RowDefinition>
+                                        <RowDefinition Height="10*"></RowDefinition>
+                                    </Grid.RowDefinitions> 
+                                <Frame Padding="0" HorizontalOptions="FillAndExpand"
+                                    Margin="7,16,7,0" CornerRadius="10"
+                                       HeightRequest="194"
+                                       Grid.Row="0">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="80*"></RowDefinition>
+                                                    <RowDefinition Height="20*"></RowDefinition>
+                                                    <RowDefinition Height="0*"></RowDefinition>
+                                                </Grid.RowDefinitions>                                                                                                
+                                                <Label Text="Creemos que estas características se manifiestan en el ministerio profético de Elena G. de White. Vea la película «Como Comenzó Todo» para estar familiarizado con el origen del movimiento adventista y el don de profecía." TextColor="#AAAAAA"
+                                                         FontSize="16" HorizontalTextAlignment="Center"
+                                                        VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                                                          WidthRequest="185"
+                                                      Grid.Row="0"  FontAttributes="Bold"                    
+                                                      Margin="15,10,15,0">
+                                                </Label>                                                
+                                                <Grid Grid.Row="1" VerticalOptions="Start">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="15*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="85*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>                                                    
+                                                    <Label Grid.Column="1" VerticalOptions="Center"                                                           
+                                                           FontSize="16"
+                                                           HorizontalOptions="Center"
+                                                           HorizontalTextAlignment="Center"
+                                                           TextColor="#9A9A9A"
+                                                           Margin="0,0,0,0"
+                                                           Grid.Row="0">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                
+                                                                <Span Text="Ver la pelicula"
+                                                                      TextColor="Blue"
+                                                                      TextDecorations="Underline">
+                                                                    <Span.GestureRecognizers>
+                                                                        <TapGestureRecognizer Command="{Binding TapCommand}"
+                                                                                              CommandParameter="https://www.youtube.com/watch?v=D3eq4zHjaeo" />
+                                                                    </Span.GestureRecognizers>
+                                                                </Span>
+                                                                <Span Text="." />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                                </Grid>                                                                                                                                                                                                   
+                                            </Grid>
+                                </Frame>
+                                    <Button Grid.Row="0" Padding="0"
+                                        BackgroundColor="#3F8AD9" TextColor="White"
+                                        CornerRadius="28" Text="8" FontSize="18"
+                                        VerticalOptions="Start" HorizontalOptions="Start"
+                                        WidthRequest="30" HeightRequest="28"
+                                        Margin="0,4,0,0"/>
+                                </Grid>
+                                <Grid VerticalOptions="Center" HorizontalOptions="Center"
+                                          WidthRequest="120" HeightRequest="35"
+                                      Grid.Row="2" 
+                                      Margin="0,0,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                                            <ColumnDefinition Width="7*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.GestureRecognizers>
+                                                <TapGestureRecognizer
+                                                        Tapped="OnTapGuardar2"
+                                                        NumberOfTapsRequired="1" />
+                                        </Grid.GestureRecognizers>
+                                        <Grid Grid.Column="0" Grid.ColumnSpan="3" >
+                                        <Button
+                                            BackgroundColor="#3f8ad9" TextColor="Transparent"
+                                            CornerRadius="20" x:Name="btnfinalizar"
+                                                Clicked="btnfinalizar_Clicked"/>
+                                        </Grid>
+                                        <Label Text="&#xf00c;" x:Name="lblGoBack"
+                                           FontFamily="{StaticResource FontAwesomeSolid}" FontSize="18"
+                                           VerticalOptions="Center" HorizontalOptions="End"
+                                           Margin="0,0,0,0" Grid.Column="0"
+                                               TextColor="White"/>                    
+                                        <Label Grid.Column="1" VerticalOptions="Center"
+                                               Text="¡Finalizar!"
+                                               FontSize="17"
+                                               HorizontalOptions="FillAndExpand"
+                                               HorizontalTextAlignment="Center"
+                                               TextColor="White"
+                                               Margin="0,0,-7,0"/>
+                                    </Grid>
+                        </StackLayout>
+                </ScrollView>
+                            
+            </Grid> 
+            <Grid VerticalOptions="End" HorizontalOptions="Center"
+                      WidthRequest="193" HeightRequest="48"
+                  Grid.Row="2"
+                  Margin="0,0,0,4">
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>                    
+                    <Button Grid.Column="0" Grid.ColumnSpan="3" 
+                        BackgroundColor="White" TextColor="Transparent"
+                        CornerRadius="30"/>
+                    <Grid Grid.Column="0" WidthRequest="30" HeightRequest="30"
+                          VerticalOptions="Center" HorizontalOptions="Center"
+                          Margin="0,3,-11,0">
+                        <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Tapped="OnTapMenuBuscar"
+                                        NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>
+                    <ffimageloadingsvg:SvgCachedImage 
+                                                      
+                                                      Source="resource://EstudiosBiblicos.Iconos.Search.svg"/>
+                    </Grid>
+                    <Grid Grid.Column="1" WidthRequest="90" HeightRequest="90"
+                          VerticalOptions="Center" HorizontalOptions="Center"
+                          Margin="-20,-5,-20,0">
+                        <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Tapped="OnTapMenuMisCursos"
+                                        NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>
+                    <ffimageloadingsvg:SvgCachedImage VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                        Source="resource://EstudiosBiblicos.Iconos.BibliaS.svg"/>
+                    </Grid>
+                    <Grid Grid.Column="2" WidthRequest="30" HeightRequest="30"
+                          VerticalOptions="Center" HorizontalOptions="Center"
+                          Margin="-10,3,0,0">
+                        <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                        Tapped="OnTapPerfil"
+                                        NumberOfTapsRequired="1" />
+                        </Grid.GestureRecognizers>
+                    <ffimageloadingsvg:SvgCachedImage VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                        Source="resource://EstudiosBiblicos.Iconos.accountS.svg"/>
+                    </Grid>
+                </Grid>   
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EstudiosBiblicos.Vistas.WLogin"
+             xmlns:local="clr-namespace:EstudiosBiblicos">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0"
+              BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="7*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Source="login" Grid.Column="0" Grid.ColumnSpan="2"
+                   Grid.Row="0" Grid.RowSpan="2" VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   Aspect="AspectFill"/>
+            <Frame Padding="0" HorizontalOptions="FillAndExpand"
+                                    Margin="30,100,30,0" CornerRadius="10"
+                                       HeightRequest="40"                                       
+                   Grid.Row="1" Grid.Column="0" 
+                   Grid.ColumnSpan="2"
+                   VerticalOptions="Start">
+                <Grid VerticalOptions="FillAndExpand"
+                      HorizontalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="9*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <local:RoundedEntry Margin="0,0,0,-12"
+                                TextColor="#99BCE2"
+                                Placeholder="micorreo"
+                           FontSize="15" Grid.Column="1"
+                           x:Name="tbCorreo"/>  
+                    <Label Text="Correo" TextColor="#99BCE2"
+                            VerticalOptions="Center" 
+                            TranslationY="-11" FontSize="11"
+                            Margin="5,0,0,0"
+                           Grid.Column="1">
+                                    
+                    </Label>
+                    <Grid Grid.Column="0">
+                        <Label Text="@" TextColor="#99BCE2"
+                                VerticalOptions="Center" 
+                                 FontSize="21"
+                               HorizontalOptions="Center"
+                                Margin="5,0,0,0"
+                               FontAttributes="Bold"
+                               TranslationY="-2">
+                                    
+                        </Label>
+                    </Grid>
+                </Grid>
+            </Frame>
+            <Frame Padding="0" HorizontalOptions="FillAndExpand"
+                                    Margin="30,150,30,0" CornerRadius="10"
+                                       HeightRequest="40"                                       
+                   Grid.Row="1" Grid.Column="0" 
+                   Grid.ColumnSpan="2"
+                   VerticalOptions="Start">
+                <Grid VerticalOptions="FillAndExpand"
+                      HorizontalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="9*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                        <local:RoundedEntry Grid.Column="1"
+                                            Margin="0,0,0,-12"
+                                    TextColor="#99BCE2"
+                                    Placeholder="***************"
+                                            IsPassword="True"
+                               FontSize="15"
+                               x:Name="tbPass"/>  
+                        <Label Text="Contraseña" TextColor="#99BCE2"
+                                VerticalOptions="Center" Grid.Column="1"
+                                TranslationY="-11" FontSize="11"
+                                Margin="5,0,0,0">
+                                    
+                        </Label>
+                        <Grid Grid.Column="0">
+                            <Label Text="&#xf3ed;"  TextColor="#99BCE2"
+                                VerticalOptions="Center" 
+                                 FontSize="21"
+                               HorizontalOptions="Center"
+                                Margin="5,0,0,0"
+                               FontFamily="{StaticResource FontAwesomeSolid}"
+                               TranslationY="0">
+                                    
+                            </Label>
+                             
+                        </Grid>
+                </Grid>
+            </Frame>
+            <Grid VerticalOptions="Center" HorizontalOptions="Center"
+                      WidthRequest="80" HeightRequest="35"
+                  Grid.Row="1" Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                  Margin="0,70,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="7*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                    Tapped="OnTapFiltros"
+                                    NumberOfTapsRequired="1" />
+                    </Grid.GestureRecognizers>
+                    <Button Grid.Column="0" Grid.ColumnSpan="3" 
+                        BackgroundColor="#3f8ad9" TextColor="Transparent"
+                        CornerRadius="20"
+                            Clicked="Button_Clicked"/>
+                    <Label Text="&#xf138;"
+                       FontFamily="{StaticResource FontAwesomeSolid}" FontSize="18"
+                       VerticalOptions="Center" HorizontalOptions="End"
+                       Margin="0,0,-7,0" Grid.Column="0"
+                           TextColor="White"/>                    
+                    <Label Grid.Column="1" VerticalOptions="Center"
+                           Text="Iniciar" FontSize="14"
+                           HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"
+                           TextColor="White"
+                           Margin="5,0,0,0"/>
+                </Grid>     
+            <Grid VerticalOptions="Center" HorizontalOptions="Center"
+                      WidthRequest="120" HeightRequest="35"
+                  Grid.Row="1" Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                  Margin="0,240,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                        <ColumnDefinition Width="7*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                    Tapped="OnTapRegistro"
+                                    NumberOfTapsRequired="1" />
+                    </Grid.GestureRecognizers>
+                    <Button Grid.Column="0" Grid.ColumnSpan="3" 
+                        BackgroundColor="#FABA00" TextColor="Transparent"
+                        CornerRadius="20"
+                            x:Name="btnregistro"
+                            Clicked="btnregistro_Clicked"/>
+                    <Label Text="&#xf234;" x:Name="lblGoBack"
+                       FontFamily="{StaticResource FontAwesomeSolid}"
+                           FontSize="18"
+                       VerticalOptions="Center" HorizontalOptions="End"
+                       Margin="0,0,-7,0" Grid.Column="0"
+                           TextColor="White"
+                           RotationY="180"/>                    
+                    <Label Grid.Column="1" VerticalOptions="Center"
+                           Text="Registrate" FontSize="14"
+                           HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"
+                           TextColor="White"
+                           Margin="0,0,-7,0"/>
+                </Grid>
+
+            <Label Text="¿Olvidaste algo?" TextColor="#B50000" x:Name="lblforgot"
+                     FontSize="9" FontAttributes="Bold"
+                    VerticalOptions="Center" HorizontalOptions="End"
+                      WidthRequest="70" HeightRequest="35"
+                  Grid.Row="1" Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                  Margin="0,55,25,0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Tapped="OnTapForgot"
+                            NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text="Inicia con tus redes sociales" TextColor="#B7B7B7"
+                     FontSize="13" FontAttributes="Bold"
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                      WidthRequest="165" HeightRequest="35"
+                  Grid.Row="1" Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                  Margin="32,165,30,0"
+                   IsVisible="False">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Tapped="OnTapForgot"
+                            NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Text="¿No tienes cuenta?" TextColor="#B7B7B7"
+                     FontSize="16"  FontAttributes="Bold"
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                    HeightRequest="35"
+                  Grid.Row="1" Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                  Margin="0,210,0,35">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Tapped="OnTapForgot"
+                            NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
